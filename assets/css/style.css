@@ -21,7 +21,7 @@ a {
 
 .main-content {
   width: 1170px;
-  min-width: calc(100% - 48px);
+  max-width: calc(100% - 48px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -283,18 +283,17 @@ a {
 }
 
 /* popular-top */
-.popular .desc {
+.popular-top .desc {
   margin-top: 16px;
   width: 458px;
   color: #5f5b53;
   font-size: 1.8rem;
-  font-weight: 400;
   line-height: 1.67; /* 166.667% */
 }
-.popular .popular-top {
+.popular-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .popular-top .controls {
@@ -309,7 +308,6 @@ a {
   background: transparent;
   width: 40px;
   height: 40px;
-  flex-shrink: 0;
   border-radius: 50%;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
@@ -467,7 +465,7 @@ a {
 }
 
 .feedback-item .open-quotes {
-  margin-left: 241px;
+  margin-left: -30px;
 }
 
 .feedback-item blockquote {
@@ -475,7 +473,6 @@ a {
   font-size: 2.6rem;
   font-style: italic;
   line-height: 1.54;
-  margin-left: 271px;
 }
 
 /* =================================features================================== */
