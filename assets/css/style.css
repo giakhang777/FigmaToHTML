@@ -526,11 +526,11 @@ a {
 /* features2 */
 .features2 .features-body {
   flex-direction: row-reverse;
-/* vì features đã có padding là 65px mà 2 features cách nhau 200px nên lấy 200 - 65 - 65 = 70px */
+  /* vì features đã có padding là 65px mà 2 features cách nhau 200px nên lấy 200 - 65 - 65 = 70px */
   margin-top: 70px;
 }
 
-.features2 .content{
+.features2 .content {
   width: 49%;
 }
 
@@ -539,4 +539,122 @@ a {
   height: 440px;
   border-radius: 20px;
   object-fit: cover;
+}
+
+/* ====================================blog======================================= */
+.blog {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #fffcf4;
+}
+
+.blog .blog-top {
+  /* day la the block nen dung text-align */
+  text-align: center;
+}
+
+.blog .blog-top .desc {
+  width: 448px;
+  /* vì giới hạn độ rộng nên không thể căn giữa theo text-align phải dùng margin */
+  margin: 16px auto 55px;
+  margin-top: 16px;
+  color: #696262;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+
+.blog .blog-list {
+  overflow: hidden;
+  display: flex;
+  gap: 30px;
+}
+
+.blog-list .item {
+  /* thêm vào để các item ko bị co lại */
+  flex-shrink: 0;
+  /* cần hiển thị 3 item, mỗi item cách nhau 30px nên bị hụt 60px, vì vậy lấy 60/3 =20px (mỗi tấm ảnh chiếm 33.33% w) */
+  width: calc(33.33% - 20px );
+  border-radius: 16px;
+  background: #fff;
+}
+
+.blog-list .thumb {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.blog-list .info {
+  padding: 20px 20px 28px;
+}
+
+.blog-list .date {
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+  padding-bottom: 12px;
+}
+
+/* :before lúc này giống thẻ con của date nên để căn giữa dấu . dùng display: flex */
+.blog-list .info .date::before {
+  content: "";
+  /* thêm để có dấu chấm, dấu chấm nằm cùng hàng */
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.blog-list .info .date::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  content: "";
+  width: 160px;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+
+.blog-list .title {
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.blog-list .btn{
+  font-size: 1.4rem;
+}
+
+.blog-list .btn:hover {
+  background: #ffb900;
+}
+
+.blog .dots {
+  gap: 6px;
+  display: flex;
+  margin-top: 28px;
+  justify-content: center;
+}
+
+.blog .dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+
+.blog .dot.active {
+  background: var(--primary-color);
+  cursor: default;
 }
